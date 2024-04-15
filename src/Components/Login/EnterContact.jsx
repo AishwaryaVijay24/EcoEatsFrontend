@@ -2,8 +2,13 @@ import React, { useState } from 'react';
 import './ModalLogin.css';
 import { X } from 'lucide-react'; // Assuming Eye and EyeOff icons for password visibility
 import axios from 'axios';
+
+const backendUrl= process.env.ENVIRONMENT==="dev"?"http://localhost:8000":"https://eco-eats-website-back-end.vercel.app"
+
 const EnterContact = ({ onClose }) => {
   
+
+
   const [contactName, setcontactName] = useState('')
   const [contactEmail, setcontactEmail ]= useState('')
   const [contactMessage, setcontactMessage ]= useState('')
@@ -11,7 +16,7 @@ const EnterContact = ({ onClose }) => {
   const handleContactSubmit = async (e) => {
     e.preventDefault();
     try{
-    await axios.post("http://localhost:8000/contactus",{
+    await axios.post(`${backendUrl}/contactus`,{
       contactName,
       contactEmail,
       contactMessage

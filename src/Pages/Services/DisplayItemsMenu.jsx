@@ -8,6 +8,8 @@ import CardButton from './CardButton';
 import Cart from './Cart';
 import Footer from '../../Components/Footer/Footer';
 
+const backendUrl= process.env.ENVIRONMENT==="dev"?"http://localhost:8000":"https://eco-eats-website-back-end.vercel.app"
+
 const DisplayItemsMenu = () => {
     const { restaurantId } = useParams();
     const [menuItems, setMenuItems] = useState([]);
@@ -34,7 +36,7 @@ const DisplayItemsMenu = () => {
     useEffect(() => {
         const fetchMenuItems = async () => {
             try {
-                const response = await axios.get(`http://localhost:8000/menuitems/${restaurantId}`);
+                const response = await axios.get(`${backendUrl}/menuitems/${restaurantId}`);
                 console.log('Response from backend:', response); // Log received data
                 if (response.data.success === true && Array.isArray(response.data.result)) {
                     const itemsWithScore = response.data.result.map(item => ({ ...item, score: 0 }));

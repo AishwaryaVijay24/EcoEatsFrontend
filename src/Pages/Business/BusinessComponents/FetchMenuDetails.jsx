@@ -3,6 +3,9 @@ import axios from 'axios';
 import { useParams } from 'react-router-dom';
 import BusinessHeader from '../../../Components/Header/BusinessHeader';
 import './FetchMenuDetails.css'
+
+const backendUrl= process.env.ENVIRONMENT==="dev"?"http://localhost:8000":"https://eco-eats-website-back-end.vercel.app"
+
 const FetchMenuDetails = () => {
     const { restaurantId } = useParams();
     const [menuItems, setMenuItems] = useState([]);
@@ -11,7 +14,7 @@ const FetchMenuDetails = () => {
     useEffect(() => {
         const fetchMenuItems = async () => {
             try {
-                const response = await axios.get(`http://localhost:8000/menuitems/${restaurantId}`);
+                const response = await axios.get(`${backendUrl}/menuitems/${restaurantId}`);
                 console.log('Response from backend:', response); // Log received data
                 if (response.data.success === true && Array.isArray(response.data.result)) {
                     setMenuItems(response.data.result);
@@ -26,7 +29,7 @@ const FetchMenuDetails = () => {
 
     const handleRemoveItem = async (itemName) => {
         try {
-            await axios.delete(`http://localhost:8000/menuitems/${itemName}`);
+            await axios.delete(`${backendUrl}/menuitems/${itemName}`);
             setMenuItems(prevItems => prevItems.filter(item => item.itemName !== itemName));
         } catch (error) {
             console.error('Error removing menu item:', error);

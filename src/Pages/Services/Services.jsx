@@ -5,6 +5,9 @@ import { useNavigate } from 'react-router';
 import './Services.css';
 import Header from '../../Components/Header/Header';
 import Footer from '../../Components/Footer/Footer';
+
+const backendUrl= process.env.ENVIRONMENT==="dev"?"http://localhost:8000":"https://eco-eats-website-back-end.vercel.app"
+
 const Services = () => {
     const [restaurants, setRestaurants] = useState([]);
     const [error, setError] = useState(null);
@@ -22,7 +25,7 @@ const Services = () => {
         // Function to fetch restaurant details from the backend
         const fetchRestaurants = async () => {
             try {
-                const response = await axios.get("http://localhost:8000/restaurants");
+                const response = await axios.get(`${backendUrl}/restaurants`);
                 if (response.data && Array.isArray(response.data)) {
                     setRestaurants(response.data);
                 } else {

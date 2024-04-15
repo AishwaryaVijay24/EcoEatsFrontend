@@ -4,6 +4,10 @@ import { useNavigate } from 'react-router';
 import axios from 'axios';
 import Video from '../Home/Video.mp4'
 import Footer from '../../Components/Footer/Footer';
+
+const backendUrl= process.env.ENVIRONMENT==="dev"?"http://localhost:8000":"https://eco-eats-website-back-end.vercel.app"
+
+
 const BusinessLoginRegister = () => {
   const [Owneremail, setOwnerEmail] = useState('');
   const [Ownerpassword, setOwnerPassword] = useState('');
@@ -19,7 +23,7 @@ const BusinessLoginRegister = () => {
   const submitBusinessLogin = async (e) => {
     e.preventDefault();
     try{
-     await axios.post("http://localhost:8000/submitbusinesslogin",{
+     await axios.post(`${backendUrl}/submitbusinesslogin`,{
       Owneremail,
       Ownerpassword
     });

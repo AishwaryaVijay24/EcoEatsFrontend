@@ -4,6 +4,8 @@ import './ModalLogin.css';
 import { X, EyeOff, Eye } from 'lucide-react'; // Assuming Eye and EyeOff icons for password visibility
 import axios from 'axios';
 import { useAuth } from './AuthContext';
+  
+const backendUrl= process.env.ENVIRONMENT==="dev"?"http://localhost:8000":"https://eco-eats-website-back-end.vercel.app"
 
 const Modal = ({ onClose }) => {
   const [action, setAction] = useState("Please Login to Continue");
@@ -31,7 +33,7 @@ const Modal = ({ onClose }) => {
         // If action is to register, send a POST request with signup data
         try {
           alert("submitted");
-          await axios.post("http://localhost:8000/", {
+          await axios.post(backendUrl, {
             name,
             email,
             phoneNumber,
@@ -56,7 +58,7 @@ const Modal = ({ onClose }) => {
         // Inside the submit function in Modal.jsx
         try {
           // Send POST request to login endpoint
-          const response = await axios.post("http://localhost:8000/login", {
+          const response = await axios.post(`${backendUrl}/login`, {
             email,
             password,
           });

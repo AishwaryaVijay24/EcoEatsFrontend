@@ -4,6 +4,9 @@ import { useParams } from 'react-router-dom';
 import { useNavigate } from "react-router-dom";
 import BusinessHeader from "../../../Components/Header/BusinessHeader";
 import BusinessLogout from "../../../Components/Logout/businessLogout";
+
+const backendUrl= process.env.ENVIRONMENT==="dev"?"http://localhost:8000":"https://eco-eats-website-back-end.vercel.app"
+
 const MenuDetails = () => {
     const [items, setItems] = useState([{ itemName: '', itemPrice: '', itemCategory: '' }]);
     const { restaurantId } = useParams();
@@ -39,7 +42,7 @@ const MenuDetails = () => {
         e.preventDefault();
         try {
             for (const item of items) {
-                await axios.post("http://localhost:8000/menuitems", { ...item, restaurantId });
+                await axios.post(`${backendUrl}/menuitems`, { ...item, restaurantId });
             }
             console.log("Menu items submitted successfully!");
             navigate(`/displaymenu/${restaurantId}`);

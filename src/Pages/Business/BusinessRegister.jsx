@@ -4,6 +4,9 @@ import { useNavigate } from 'react-router';
 import axios from 'axios';
 import Footer from '../../Components/Footer/Footer';
 
+const backendUrl= process.env.ENVIRONMENT==="dev"?"http://localhost:8000":"https://eco-eats-website-back-end.vercel.app"
+
+
 const BusinessSignupForm = () => {
   const [Ownername, setOwnername] = useState('');
   const [Owneremail, setOwneremail] = useState('');
@@ -32,7 +35,7 @@ const BusinessSignupForm = () => {
   const submitBusinessRegister = async (e) => {
     e.preventDefault();
     try {
-      await axios.post("http://localhost:8000/submitbusinessregistration", {
+      await axios.post(`${backendUrl}/submitbusinessregistration`, {
         Ownername,
         Owneremail,
         Ownerphone,

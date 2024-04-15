@@ -4,6 +4,8 @@ import axios from 'axios';
 import { useNavigate } from 'react-router';
 import BusinessLogout from '../../../Components/Logout/businessLogout';
 
+const backendUrl= process.env.ENVIRONMENT==="dev"?"http://localhost:8000":"https://eco-eats-website-back-end.vercel.app"
+
 const RestDetails = () => {
     const [restaurantName, setRestaurantName] = useState('');
     const [restaurantAddress, setRestaurantAddress] = useState('');
@@ -23,7 +25,7 @@ const RestDetails = () => {
     const submitRestDetails = async (e) => {
         e.preventDefault();
         try {
-            await axios.post("http://localhost:8000/restdetails", {
+            await axios.post(`${backendUrl}/restdetails`, {
                 restaurantName,
                 restaurantAddress,
                 restaurantImage
