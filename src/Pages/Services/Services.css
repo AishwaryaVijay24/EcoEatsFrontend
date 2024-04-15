@@ -1,0 +1,35 @@
+
+.Services-Container {
+    width: auto;
+    height: auto;
+    background-color: #20443c;
+    display: block;
+    justify-content: center; /* horizontally centers the .ServicesPage container */
+    align-items: center; /* vertically centers the .ServicesPage container */
+}
+
+.ServicesPage {
+    width: auto;
+    height: auto;
+    background-color: #20443c;
+    display: flex;
+     /* vertically centers the content inside .ServicesPage */
+}
+
+.PageOfServices{
+    width: auto;
+    height:auto;
+    background-color: #20443c;
+
+}
+
+.Service-Title{
+    width:100%;
+    height:10vh;
+    background-color: #20443c;
+    font-size: 2rem;
+    text-align: center;
+    margin-top: 2%;
+    font-weight: 600;
+    color: aliceblue;
+}

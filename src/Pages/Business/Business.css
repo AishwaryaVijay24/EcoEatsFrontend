@@ -1,0 +1,154 @@
+#ProfitSurplus{ 
+    font-size: 1.5rem !important;
+}
+
+.ProfitButtonReg{
+    width:80%;
+    height:10vh;
+    background-color: #20443c;
+    margin-top: 5%;
+    margin-left: auto; /* Aligning the container to the center horizontally */
+    margin-right: auto; /* Aligning the container to the center horizontally */
+}
+
+.BusinessRegistration-Button,
+.BusinessRegistration-Button *,
+.BusinessRegistration-Button :after,
+.BusinessRegistration-Button:before,
+.BusinessRegistration-Button:after,
+.BusinessRegistration-Button:before {
+  border: 0 solid;
+  box-sizing: border-box;
+}
+
+.BusinessRegistration-Button {
+
+  background-color: #6ca070;
+  background-image: none;
+  color: #ab7979;
+  cursor: pointer;
+  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
+    Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif,
+    Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+  font-size: 100%;
+  font-weight: 900;
+  line-height: 1.5;
+  margin: 0;
+  padding: 0;
+  text-transform: uppercase;
+  margin-left: 25%;
+  width:45%;
+  height:8vh;
+}
+
+.BusinessRegistration-Button:disabled {
+  cursor: default;
+}
+
+.BusinessRegistration-Button:-moz-focusring {
+  outline: auto;
+}
+
+.BusinessRegistration-Button svg {
+  display: block;
+  vertical-align: middle;
+}
+
+.BusinessRegistration-Button [hidden] {
+  display: none;
+}
+
+.BusinessRegistration-Button {
+  border-radius: 99rem;
+  border-width: 2px;
+  padding: 0.8rem 3rem;
+  z-index: 0;
+}
+
+.BusinessRegistration-Button,
+.BusinessRegistration-Button .Businesstext-container {
+  overflow: hidden;
+  position: relative;
+}
+
+.BusinessRegistration-Button .Businesstext-container {
+  display: block;
+  mix-blend-mode: difference;
+}
+
+.BusinessRegistration-Button .Businesstext {
+  display: block;
+  position: relative;
+}
+
+.BusinessRegistration-Button:hover .Businesstext {
+  -webkit-animation: move-up-alternate 0.3s forwards;
+  animation: move-up-alternate 0.3s forwards;
+}
+
+@-webkit-keyframes move-up-alternate {
+  0% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(80%);
+  }
+
+  51% {
+    transform: translateY(-80%);
+  }
+
+  to {
+    transform: translateY(0);
+  }
+}
+
+@keyframes move-up-alternate {
+  0% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(80%);
+  }
+
+  51% {
+    transform: translateY(-80%);
+  }
+
+  to {
+    transform: translateY(0);
+  }
+}
+
+.BusinessRegistration-Button:after,
+.BusinessRegistration-Button:before {
+  --skew: 0.2;
+  background: #fff;
+  content: "";
+  display: block;
+  height: 102%;
+  left: calc(-50% - 50% * var(--skew));
+  pointer-events: none;
+  position: absolute;
+  top: -104%;
+  transform: skew(calc(150deg * var(--skew))) translateY(var(--progress, 0));
+  transition: transform 0.2s ease;
+  width: 100%;
+}
+
+.BusinessRegistration-Button:after {
+  --progress: 0%;
+  left: calc(50% + 50% * var(--skew));
+  top: 102%;
+  z-index: -1;
+}
+
+.BusinessRegistration-Button:hover:before {
+  --progress: 100%;
+}
+
+.BusinessRegistration-Button:hover:after {
+  --progress: -102%;
+}

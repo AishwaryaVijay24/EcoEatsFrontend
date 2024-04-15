@@ -1,0 +1,57 @@
+.footer {
+  width: auto;
+  padding: 1rem;
+  background-color: #20433c;
+  display: flex;
+  flex-direction: column;
+  height: auto;
+  /* Align text to the left */
+
+}
+
+.Footerflex {
+  display: flex;
+  justify-content: space-between;
+   /* Add space between link groups */
+}
+
+.firstblock {
+  margin: 0 1rem; /* Adjust margin between blocks */
+}
+
+.link-group {
+  display: flex;
+  flex-direction: column;
+  color: #fff;
+  margin-bottom: 1.5rem;
+  text-align: left; 
+  justify-content: center;/* Add more space between link groups */
+}
+
+.link-group button {
+  margin-bottom: 0.5rem; /* Adjust margin between buttons */
+}
+
+.instafb {
+  background-color: transparent;
+  border: none;
+  margin: 0.5rem;
+}
+
+.instafb img {
+  width: 2.5rem; /* Adjust the size of icons as needed */
+}
+
+.textu {
+  font-family: InknutAntiqua;
+  font-size: 1.125rem;
+  color: #fff;
+  white-space: nowrap;
+ 
+}
+
+.ButtonskaCSS {
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem; /* Adjust top margin */
+}

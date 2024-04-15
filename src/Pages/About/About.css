@@ -1,0 +1,250 @@
+.About-Page {
+    width: 100%;
+    height: auto;
+    background-color: #20433c;
+}
+.No-Wastage {
+    width: 100%;
+    background-color: #20433c;
+    height: auto;
+}
+.FirstPartAbout {
+    display: flex;
+}
+.Food-Wastage {
+    width: 60%;
+    height: 80vh;
+    background-color: #20433c;
+}
+.Image-Wastage {
+    width: 40%;
+    height: 80vh;
+    background-color: #20433c;
+}
+.Text-Wastage {
+    width: 85%;
+    height: 70vh;
+    background-color: #20433c;
+    margin: auto;
+    display: block;
+    align-items: center; /* Center vertically */
+    justify-content: center
+}
+.Food-Title {
+    background-color: #20433c;
+    width: 100%;
+    height: auto;
+    margin-top: 5%;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    font-size: 3rem;
+    font-weight: 700;
+    color: #ffffff;
+    display: flex;
+    justify-content: center; /* Centers the content horizontally */
+    align-items: center;
+    overflow: hidden; /* Prevents text overflow */
+    word-wrap: break-word;  /* Change overflow property */
+}
+.Food-Title p {
+    /* Prevents wrapping */
+    margin-top: 10%; /* Prevents wrapping */
+}
+  #waste-id{
+    color: burlywood;
+  }
+  
+             
+.Food-Content{
+    width:100%;
+    background-color: #20433c;
+    height: auto;
+    margin-top: 4%;
+    color: #ffffff;
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+@keyframes moveDown {
+    0% {
+        transform: translateY(0); /* Start from initial position */
+    }
+    100% {
+        transform: translateY(100%); /* Move downwards to 100% of container height */
+    }
+}
+.Arrow-Icon {
+    width: auto;
+    height: auto;
+    background-color: #20433c;
+    font-size: 5rem;
+    display: flex;
+    justify-content: center; /* Centers the content horizontally */
+    align-items: center; /* Centers the content vertically */
+    margin-top: 6%;
+    color: burlywood;
+    animation: moveDown 2s infinite alternate; /* Animation with 2 seconds duration, alternates direction */
+}
+.SecondPart{
+width:auto;
+background-color: #20433c;
+margin-top: 2%;
+display: flex;
+}
+.Icon-Container {
+    display: flex;
+    justify-content: center; /* Centers the content horizontally */
+    align-items: center; /* Centers the content vertically */
+}
+
+.Green-Food{
+    width:70%;
+    height:50vh;
+    background-color: #20433c;
+    margin: 0 auto; /* Center horizontally */
+    display: flex;
+    justify-content: center; /* Centers the content horizontally */
+    align-items: center; 
+    margin-top: 20%;
+    overflow: hidden; /* Hide overflow content */
+    
+}
+.Green-Food img {
+    transition: transform 0.3s ease; 
+    transform-origin: center; /* Apply transition effect */
+}
+.Green-Food:hover img {
+    transform: scale(0.9); /* Scale down the image on hover */
+}
+.IconWrapper{
+    width: 100%; /* Ensure both wrappers take full width of ContentAll */
+    max-width: 100%; /* Limit max width */
+    text-align: center;
+    display: flex; /* Center the content horizontally */
+}
+.Icon-CSS {
+    max-width: 100%; /* Limit max width of the icon */
+    max-height: 100%; /* Limit max height of the icon */
+    width: 9%; /* Allow width to adjust automatically */
+    height: auto; /* Allow height to adjust automatically */
+    color: burlywood;
+    margin-left: 19%;
+   
+}
+#ImageSprout{
+    color: #20433c;
+    margin-left: 0;
+}
+#TextSprout{
+    font-size: 1.2rem;
+    margin-left: 3%;
+    margin-top: 2%;
+    font-weight: 500;
+}
+#LeafMargin{
+    max-width: 100%; /* Limit max width of the icon */
+    max-height: 100%; /* Limit max height of the icon */
+    width: 9%; /* Allow width to adjust automatically */
+    height: auto; /* Allow height to adjust automatically */
+    color: burlywood;
+    margin-left: 12%;
+    margin-right: 5%;
+}
+#PiggyMargin{
+    max-width: 100%; /* Limit max width of the icon */
+    max-height: 100%; /* Limit max height of the icon */
+    width: 9%; /* Allow width to adjust automatically */
+    height: auto; /* Allow height to adjust automatically */
+    color: burlywood;
+    margin-right: 5.2%;
+}
+.TextPart {
+    display: flex; /* Use flexbox for layout */
+    justify-content: center; /* Center flex items horizontally */
+    align-items: flex-start; /* Align flex items to the start (top) */
+    background-color: #20433c;
+    overflow-x: auto;
+    margin-bottom: 5%; /* Allow horizontal scrolling if necessary */
+}
+.TextPortion {
+    width: 30%;
+    height: auto;
+    background-color: #20433c;
+     
+    margin: 0 2%; /* Adjust margin to create space between TextPortion blocks */
+}
+.Title-CSS {
+    color: burlywood;
+    text-align: center;
+    font-weight: 700;
+}
+#Text-CSS {
+    color: burlywood;
+    text-align: center;
+    
+}
+.PartTwo{
+    background-color: antiquewhite;
+    width: 100%;
+    height: auto;
+    display: flex;
+}
+.PortionOne{
+    display: block;
+}
+#Image-Bg{
+    background-color: antiquewhite;
+    color: #20433c;
+    height: auto;
+}
+.New-Ideas{
+    background-color: antiquewhite;
+    width: 80%;
+    height: auto;
+    margin-top: 2%;
+}
+.IdeaOne{
+    background-color: antiquewhite;
+    width:100%;
+    height:auto;
+}
+#Sprout{
+    display: flex;
+}
+#S-Image{
+    width:100;
+    background-color: antiquewhite;
+    max-width: 100%;}
+#RegButton{
+    width: 100%;
+    height: auto;
+    background-color: antiquewhite(171, 192, 185);
+    margin-top: 10%;
+    margin-bottom: 10%;
+}
+.Registration-Button {
+    --bg: #20433c;
+    --hover-bg: #a2d3a6;
+    --hover-text: #000;
+    color: #fff;
+    cursor: pointer;
+    border: 1px solid var(--bg);
+    border-radius: 4px;
+    padding: 0.8em 2em;
+    background: var(--bg);
+    transition: 0.2s;
+    margin-left: 5%;
+  }
+  .Registration-Button:hover {
+    color: var(--hover-text);
+    transform: translate(-0.25rem, -0.25rem);
+    background: var(--hover-bg);
+    box-shadow: 0.25rem 0.25rem var(--bg);
+  }
+  
+  .Registration-Button:active {
+    transform: translate(0);
+    box-shadow: none;
+  }
+  

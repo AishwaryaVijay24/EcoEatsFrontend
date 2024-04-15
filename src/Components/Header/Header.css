@@ -1,0 +1,113 @@
+.Header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  background-color: #20443c;
+  
+}
+
+.HeaderLogo-Container img {
+  width: 100px;
+}
+
+.Header-Title-Container {
+  
+  align-items: center;
+  margin-left: 10px;
+  font-weight: 700;
+  color: white;
+  display: flex;
+}
+
+.Header-Title-Page {
+ 
+  font-size: 2rem;
+  display: flex;
+  color: white;
+  
+}
+
+.HeaderNav-Container a {
+  text-decoration: none;
+  color: #fff;
+  margin-right: 10px;
+  padding: 8px 16px;
+  border-radius: 20px;
+  transition: background-color 0.3s ease; /* Smooth transition for background color */
+
+}
+
+.HeaderNav-Container a:hover{
+  background-color: #6ca070; /* Change background color on hover */
+}
+
+/* CSS code */
+.NavLink-Container {
+  display: flex;
+}
+
+
+/* CSS code */
+.HeaderNavLink-Container {
+  display: flex;
+  gap: 10px; /* Add gap between buttons */
+}
+
+.NavButton {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 20px;
+  background-color: #6ca070;
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.NavButton:hover {
+  background-color: #306070; /* Change color on hover */
+}
+
+.Btn-Profile{
+  text-decoration: none;
+  color: #fff;
+  margin-right: 10px;
+  padding: 8px 16px;
+  border-radius: 20px;
+  transition: background-color 0.3s ease;
+}
+
+.Btn-Profile:hover{
+  background-color: #6ca070; /* Change background color on hover */
+
+}
+@media (max-width: 768px) {
+  .Header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .Title-Container {
+    margin-left: 0;
+    margin-top: 10px;
+    display: flex;
+  }
+
+  .Header-Title {
+    margin-left: 0;
+  }
+
+  .Nav-Container {
+    margin-top: 10px;
+    flex-direction: column;
+  }
+
+  .Nav-Container a {
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+
+  .Link-Container {
+    margin-top: 10px;
+  }
+}
