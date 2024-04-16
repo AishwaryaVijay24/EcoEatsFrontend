@@ -37,6 +37,7 @@ function App() {
         <Route path="/services" element={<Services />}></Route>
         <Route path="/displayitems/:restaurantId" element={<DisplayItemsMenu />}></Route>
         <Route path="/customer" element={<Customer />}></Route>
+        
 
       </Routes>
       </AuthProvider>

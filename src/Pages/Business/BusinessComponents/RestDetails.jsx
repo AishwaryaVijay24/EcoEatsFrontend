@@ -3,6 +3,7 @@ import BusinessHeader from '../../../Components/Header/BusinessHeader';
 import axios from 'axios';
 import { useNavigate } from 'react-router';
 import BusinessLogout from '../../../Components/Logout/businessLogout';
+import Footer from '../../../Components/Footer/Footer';
 
 const backendUrl= process.env.ENVIRONMENT==="dev"?"http://localhost:8000":"https://eco-eats-website-back-end.vercel.app"
 
@@ -72,6 +73,7 @@ const RestDetails = () => {
                 fontFamily:
                     '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif',
                 transition: 'background 0.3s ease',
+                marginBottom:'3rem'
             }}>
                 <h2 className="text-2xl font-semibold text-center text-white mb-8">Add Restaurant Details</h2>
                 <label className="block" style={{ color: 'white', fontWeight: '600' }}>
@@ -99,6 +101,7 @@ const RestDetails = () => {
                 <button type="submit" className="mt-4 bg-green-800 hover:bg-green-600 text-white font-semibold py-2 px-4 rounded-md shadow-sm"
                     onClick={submitDashboard}>Nothing To Add Move To Dashboard!</button>
             </form>
+            <Footer className="sm:mt-8"/>
         </div>
 
     );

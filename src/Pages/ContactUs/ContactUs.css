@@ -235,3 +235,21 @@
     
 
 }
+
+.Contact-Image-Container {
+    width: 65%;
+    height: 80vh;
+    background-color: antiquewhite;
+    display: flex; /* Add display flex */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+}
+
+.reflection-content-Contact {
+    background-color: antiquewhite;
+    width: 80%;
+    height: 50vh;
+    display: flex; /* Add display flex */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+}

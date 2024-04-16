@@ -4,6 +4,7 @@ import axios from 'axios';
 import BusinessHeader from '../../../Components/Header/BusinessHeader';
 import BusinessLogout from '../../../Components/Logout/businessLogout';
 import { useNavigate } from 'react-router';
+import Footer from '../../../Components/Footer/Footer';
 
 const backendUrl= process.env.ENVIRONMENT==="dev"?"http://localhost:8000":"https://eco-eats-website-back-end.vercel.app"
 
@@ -57,6 +58,7 @@ const Demo = () => {
                     </div>
                 </button>
             ))}
+            <Footer />
         </div>
     );
 };

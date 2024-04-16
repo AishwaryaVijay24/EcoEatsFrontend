@@ -3,6 +3,9 @@ import axios from 'axios';
 import { useParams } from 'react-router-dom';
 import BusinessHeader from '../../../Components/Header/BusinessHeader';
 import './FetchMenuDetails.css'
+import BusinessLogout from '../../../Components/Logout/businessLogout';
+import Done from '../../../Components/Logout/Done';
+import Footer from '../../../Components/Footer/Footer';
 
 const backendUrl= process.env.ENVIRONMENT==="dev"?"http://localhost:8000":"https://eco-eats-website-back-end.vercel.app"
 
@@ -41,6 +44,7 @@ const FetchMenuDetails = () => {
     return (
         <div>
             <BusinessHeader />
+            <BusinessLogout/>
             {error && <p>{error}</p>}
             <ul>
                 {menuItems.map((item, index) => {
@@ -65,6 +69,8 @@ const FetchMenuDetails = () => {
                     }
                 })}
             </ul>
+            <Done/>
+            <Footer/>
         </div>
 
     );

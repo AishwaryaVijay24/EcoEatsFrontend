@@ -4,6 +4,7 @@ import { useParams } from 'react-router-dom';
 import { useNavigate } from "react-router-dom";
 import BusinessHeader from "../../../Components/Header/BusinessHeader";
 import BusinessLogout from "../../../Components/Logout/businessLogout";
+import Footer from "../../../Components/Footer/Footer";
 
 const backendUrl= process.env.ENVIRONMENT==="dev"?"http://localhost:8000":"https://eco-eats-website-back-end.vercel.app"
 
@@ -74,7 +75,7 @@ const MenuDetails = () => {
                     padding: '30px',
                     width: '450px',
                     borderRadius: '20px',
-                   
+                   marginBottom:'2rem',
                     fontFamily:
                         '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif',
                     transition: 'background 0.3s ease',
@@ -166,7 +167,7 @@ const MenuDetails = () => {
                     Nothing To Add!
                 </button>
             </form>
-
+<Footer/>
         </div>
     );
 };

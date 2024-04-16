@@ -5,6 +5,7 @@ import EnterContact from '../../Components/Login/EnterContact';
 import ContactUsPlant from './PlantContact.png';
 import Header from '../../Components/Header/Header';
 import Footer from '../../Components/Footer/Footer';
+import Contact from './contact-removebg-preview.png'
 const ContactUs = () => { 
   const [showContact, setShowContact]=useState(false)
 
@@ -37,13 +38,22 @@ const ContactUs = () => {
                 <div className="PlantText">
                   <p className="">Begin your journey with EcoEats and gain effortless access to sustainable food options. Join us today and start making eco-friendly choices for a better tomorrow.</p>
                 </div>
+                
               </div>
-
+              
             </div>
             
           </div>
-
+          <div className="Contact-Image-Container">
+        
+        <div className="reflection-content-Contact">
+          {/* Add content for reflection effect */}
+          <img src={Contact} alt="Green" />
         </div>
+      </div>
+        </div>
+
+
 
 
 

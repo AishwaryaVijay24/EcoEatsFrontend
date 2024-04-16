@@ -1,8 +1,16 @@
-import React from 'react';
+import React,{useState} from 'react';
 import './Cart.css'
-const Cart = ({ cart }) => {
-    const totalPrice = cart.reduce((total, item) => total + item.itemPrice * item.quantity, 0);
+import { useNavigate } from 'react-router';
+import OrderValidated from './OrderValidated';
 
+const Cart = ({ cart }) => {
+  const [showOrder, setShowOrder]=useState(false);
+
+    const totalPrice = cart.reduce((total, item) => total + item.itemPrice * item.quantity, 0);
+    const navigate=useNavigate();
+const handleCheckout=()=>{
+navigate('/order');
+}
     return (
         <div className='ContactUs-Page'>
       <div className="Contact-Content">
@@ -63,13 +71,17 @@ const Cart = ({ cart }) => {
     <div className="Cartfooter">
       <label className="Cartprice">Total: Rs {totalPrice}</label>
       <br/> {/* Display total price */}
-      <button className="Cartcheckout-btn">Checkout</button>
+      <button className="Cartcheckout-btn" onClick={() => setShowOrder(true)}>Checkout</button>
+
+      {showOrder && <OrderValidated onClose={()=> setShowOrder(false)}/>}
+
     </div>
   </div>
 </div>
 </div>
 </div>
 </div>
+
 </div>
 </div>
 
